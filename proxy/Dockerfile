@@ -17,7 +17,7 @@ RUN mkdir -p /vol/static && \
     chown nginx:nginx /etc/nginx/conf.d/default.conf && \
     chmod +x /run.sh
 
-RUN apk add python-certbot-nginx
+RUN apk add certbot certbot-nginx
 
 
 VOLUME /vol/static
