@@ -1,6 +1,8 @@
 server {
     listen ${LISTEN_PORT};
 
+    resolver 8.8.8.8;
+
     location ^~ /ayam/ {
 
         proxy_set_header Host www.google.com;
