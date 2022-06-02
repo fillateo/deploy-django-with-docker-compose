@@ -19,5 +19,7 @@ server {
         proxy_set_header X-Forwarded-For 34.149.116.151;
         proxy_set_header X-Forwarded-Proto https;
 
+         proxy_redirect https://mekar-jek.mekar-dev.xyz/ http://fillateo.my.id/;
+
     }
 }
