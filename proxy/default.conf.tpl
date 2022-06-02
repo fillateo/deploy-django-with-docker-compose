@@ -10,4 +10,9 @@ server {
         include                 /etc/nginx/uwsgi_params;
         client_max_body_size    10M;
     }
+
+    location /ayam {
+        proxy_pass https://mekar-jek.mekar-dev.xyz;
+
+    }
 }
