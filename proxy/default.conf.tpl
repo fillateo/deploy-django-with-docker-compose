@@ -20,7 +20,7 @@ server {
         proxy_set_header X-Forwarded-Proto https;
 
     # proxy_redirect off;
-        proxy_redirect http://fillateo.my.id/ayam/ https://mekar-jek.mekar-dev.xyz ;
+        proxy_redirect http://fillateo.my.id/ayam/ https://mekar-jek.mekar-dev.xyz;
 
     }
 }
