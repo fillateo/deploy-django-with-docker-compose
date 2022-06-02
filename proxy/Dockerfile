@@ -17,6 +17,12 @@ RUN mkdir -p /vol/static && \
     chown nginx:nginx /etc/nginx/conf.d/default.conf && \
     chmod +x /run.sh
 
+RUN sudo apt install software-properties-common \
+    sudo add-apt-repository ppa:certbot/certbot \
+    sudo apt update \
+    sudo apt install certbot python-certbot-nginx \
+    sudo certbot --authenticator webroot --installer nginx -w /etc/nginx/ --agree-tos --redirect --staple-ocsp -d fillateo.my.id --email jaitramadandij@gmail.com
+
 VOLUME /vol/static
 
 USER nginx

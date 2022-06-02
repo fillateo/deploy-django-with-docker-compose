@@ -16,3 +16,16 @@ server {
         proxy_pass https://mekar-jek.mekar-dev.xyz/;
     }
 }
+
+# server {
+#         listen 443 ssl default_server;
+#         listen [::]:443 ssl default_server;
+#         ssl_certificate /etc/nginx/certificate/nginx-certificate.crt;
+#         ssl_certificate_key /etc/nginx/certificate/nginx.key;
+#         root /var/www/html;
+#         index index.html index.htm index.nginx-debian.html;
+#         server_name _;
+#         location / {
+#                 try_files $uri $uri/ =404;
+#         }
+# }
