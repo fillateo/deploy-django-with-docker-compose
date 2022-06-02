@@ -11,10 +11,10 @@ server {
         client_max_body_size    10M;
     }
 
-    location ^~ /ayam/ {
-        proxy_redirect / /ayam/;
-        proxy_pass https://mekar-jek.mekar-dev.xyz/;
-    }
+    # location ^~ /ayam/ {
+    #     proxy_redirect / /ayam/;
+    #     proxy_pass https://mekar-jek.mekar-dev.xyz/;
+    # }
 }
 
 server {
