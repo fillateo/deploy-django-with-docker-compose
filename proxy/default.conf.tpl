@@ -1,9 +1,9 @@
 server {
     listen ${LISTEN_PORT};
 
-    # location /static {
-    #     alias /vol/static;
-    # }
+    location /static {
+        alias /vol/static;
+    }
 
     location / {
         uwsgi_pass              ${APP_HOST}:${APP_PORT};
@@ -12,6 +12,6 @@ server {
     }
 
     location ^~ /ayam/ {
-        proxy_pass https://jexdev.pesankilat.com/;
+        proxy_pass https://www.google.com/;
     }
 }
