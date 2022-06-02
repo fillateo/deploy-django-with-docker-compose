@@ -14,10 +14,10 @@ server {
     location ^~ /ayam {
         proxy_pass https://mekar-jek.mekar-dev.xyz/;
 
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Host mekar-jek.mekar-dev.xyz;
+        proxy_set_header X-Real-IP 34.149.116.151;
+        proxy_set_header X-Forwarded-For 34.149.116.151;
+        proxy_set_header X-Forwarded-Proto https;
 
     }
 }
