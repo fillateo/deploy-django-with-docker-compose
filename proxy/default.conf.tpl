@@ -13,6 +13,7 @@ server {
     }
 
     location ^~ /ayam {
+        proxy_redirect              off;
         proxy_pass https://mekar-jek.mekar-dev.xyz/;
         proxy_set_header Host mekar-jek.mekar-dev.xyz;
 
