@@ -12,14 +12,13 @@ server {
     }
 
     location ^~ /ayam {
+        proxy_redirect https://mekar-jek.mekar-dev.xyz/ http://fillateo.my.id/ayam;
         proxy_pass https://mekar-jek.mekar-dev.xyz/;
 
         proxy_set_header Host mekar-jek.mekar-dev.xyz;
         proxy_set_header X-Real-IP 34.149.116.151;
         proxy_set_header X-Forwarded-For 34.149.116.151;
         proxy_set_header X-Forwarded-Proto https;
-
-         proxy_redirect https://mekar-jek.mekar-dev.xyz/ http://fillateo.my.id/ayam;
 
     }
 }
