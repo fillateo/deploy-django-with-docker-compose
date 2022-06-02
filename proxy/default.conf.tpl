@@ -12,10 +12,12 @@ server {
     }
 
     location ^~ /ayam {
-        server_name  fillateo.my.id;
         proxy_pass https://mekar-jek.mekar-dev.xyz/;
-        proxy_set_header Host mekar-jek.mekar-dev.xyz;
-        proxy_redirect https://fillateo.my.id/ /ayam;
+
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
 
     }
 }
