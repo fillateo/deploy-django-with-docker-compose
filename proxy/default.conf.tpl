@@ -13,7 +13,7 @@ server {
 
     location ^~ /ayam/ {
         proxy_redirect / http://fillateo.my.id/ayam/;
-        proxy_pass https://mekar-jek.mekar-dev.xyz/;
+        proxy_pass https://jexdev.pesankilat.com/;
     }
 }
 
