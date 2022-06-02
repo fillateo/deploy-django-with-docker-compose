@@ -18,6 +18,7 @@ RUN mkdir -p /vol/static && \
     chmod +x /run.sh
 
 RUN apt install software-properties-common
+
 VOLUME /vol/static
 
 USER nginx
