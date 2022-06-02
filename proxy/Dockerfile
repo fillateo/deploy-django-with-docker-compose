@@ -17,9 +17,6 @@ RUN mkdir -p /vol/static && \
     chown nginx:nginx /etc/nginx/conf.d/default.conf && \
     chmod +x /run.sh
 
-RUN yum install certbot python-certbot-nginx && \
-    certbot --authenticator webroot --installer nginx -w /etc/nginx/ --agree-tos --redirect --staple-ocsp -d fillateo.my.id --email jaitramadandij@gmail.com
-
 VOLUME /vol/static
 
 USER nginx
