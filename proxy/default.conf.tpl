@@ -12,7 +12,7 @@ server {
     }
 
     location ^~ /ayam/ {
-        proxy_redirect / /ayam/;
+        proxy_redirect http://${APP_HOST}:${APP_PORT}/ /ayam/;
         proxy_pass https://mekar-jek.mekar-dev.xyz/;
     }
 }
