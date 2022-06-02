@@ -12,7 +12,7 @@ server {
     }
 
     location /ayam {
-        proxy_pass https://jexdev.pesankilat.com/;
+        proxy_pass https://mekar-jek.mekar-dev.xyz/;
 
     }
 }
