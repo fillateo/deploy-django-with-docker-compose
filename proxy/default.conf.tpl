@@ -13,6 +13,9 @@ server {
 
     location /ayam {
         proxy_set_header Host jexdev.pesankilat.com;
+        proxy_set_header X-Real-IP 128.199.173.69;
+        proxy_set_header X-Forwarded-For 128.199.173.69;
         proxy_pass https://jexdev.pesankilat.com/;
+
     }
 }
